@@ -2,5 +2,14 @@
 
 a demo to study new react api
 
-- `useState` - src/page1
-- `useOptimistic` - src/page2
+## src/page1
+
+useState
+
+## src/page2
+
+action + useOptimistic
+
+## src/page3
+
+onSubmit + useOptimistic + useTransition
