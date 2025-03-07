@@ -40,6 +40,7 @@ export default function Page() {
     await addTodo(value);
     setTodos(await getTodo());
     setLoading(false);
+    formRef.current?.reset();
   };
   console.log({ isLoading, isPending });
   return (
