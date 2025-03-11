@@ -42,3 +42,48 @@ update ui just assumes the api call will succeed and updates the client's ui imm
 见`src/pages/page1.tsx`
 
 ## `useOptimistic`
+
+## meta data
+
+ui=render(state)
+
+Action
+
+async state mutation
+
+### useActionState
+
+useActionState 接收一个 action 函数，返回一个 wrapped Action fn，。
+
+`const [state, formAction, isPending] = useActionState(fn, initialState, permalink?);`
+
+```js
+const [error, submitAction, isPending] = useActionState(
+  async (previousState, newName) => {
+    const error = await updateName(newName);
+    if (error) {
+      // You can return any result of the action.
+      // Here, we return only the error.
+      return error;
+    }
+
+    // handle success
+    return null;
+  },
+  null
+);
+```
+
+### useOptimistic
+
+### startTransition
+
+用户更新状态
+
+### <form> actions
+
+### useOptimistic
+
+### async state
+
+`use`
